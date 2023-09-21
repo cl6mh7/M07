@@ -2,6 +2,7 @@
     *{
         padding: 0;
         font-family: 'Saira Extra Condensed', sans-serif;
+        user-select: none;
     }
 
     body{ background: lightblue url("https://images.alphacoders.com/457/457522.jpg") no-repeat fixed center; }
@@ -95,8 +96,16 @@
                 <table>
                     
                     <?php
-                        $n = 10;
-                        $m = 10;
+                    
+                        // LÓGICA DE LA TABLA.
+                        $n = 10;    // Filas.
+                        $m = 10;    // Columnas
+
+
+                        $boats = [4, 3, 3, 2, 2, 2, 1, 1, 1, 1];
+
+                        
+
 
                         for ($i = 0; $i < $n + 1; $i++) {
                             echo "<tr>";
@@ -118,11 +127,13 @@
                             echo "</tr>";
                         }
 
+
+
                         # ARRAYS.
                         # "Array" inicialitzat amb quatre elements.
                         $vaixells = array(
                             "Frigate" => "avaliable" || "not avaliable", 
-                            "Submarine" => "disponible" || "not avaliable", 
+                            "Submarine" => "avaliable" || "not avaliable", 
                             "Destructor" => "avaliable" || "not avaliable", 
                             "Aircraft carrier " => "avaliable" || "not avaliable");
                         
